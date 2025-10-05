@@ -16,10 +16,11 @@ import { GeneralScaleRelativityPage } from './pages/GeneralScaleRelativityPage';
 import { ThoughtExperimentsScalePage } from './pages/ThoughtExperimentsScalePage';
 import { BlackHolesScalePage } from './pages/BlackHolesScalePage';
 import { BlackHolesHubPage, CreationPage, PassagePage, WhyNoReturnPage, QuantumUniverseSizePage, InternalUniversesPage, HarmonyDescentPage, SingularityPage, EventHorizonPage, InvisibilityPage, BehindHorizonPage } from './pages/blackholes';
-import { RestrictedScaleRelativityHubPage, UniversalBudgetPage, ImmobileStatePage, ExtremSpeedPage, SpatialFreedomPage } from './pages/restricted';
+import { RestrictedScaleRelativityHubPage, UniversalBudgetPage, ImmobileStatePage, ExtremSpeedPage, SpatialFreedomPage, PivotTemporelPage, TapisRoulantRestrictedPage } from './pages/restricted';
 import { GeneralScaleRelativityHubPage, UniversalEscalatorPage, EnvironmentsPage, RadiationEffectPage, MultiplierCoefficientPage } from './pages/general';
 import { ThoughtExperimentsHubPage, DimensionsMuseumPage, UniversalTreadmillsPage } from './pages/experiments';
 import { ExpansionHubPage, IllusionExpansionPage, HubbleLawPage, CosmicRadiationPage, DarkEnergyPage } from './pages/expansion';
+import { SuperpositionTissusPage } from './pages/fabric';
 
 const AppContent: React.FC = () => {
 
@@ -39,10 +40,13 @@ const AppContent: React.FC = () => {
         <Route path="/relativite-echelles" element={<ScaleRelativityPage />} />
 
         <Route path="/tissu-espace-temps-echelle" element={<SpaceTimeScaleFabricPage />} />
+        <Route path="/tissu-espace-temps-echelle/superposition" element={<SuperpositionTissusPage />} />
 
         <Route path="/relativite-restreinte-echelles-old" element={<RestrictedScaleRelativityPage />} />
         <Route path="/relativite-restreinte-echelles" element={<RestrictedScaleRelativityHubPage />} />
         <Route path="/relativite-restreinte-echelles/budget-universel" element={<UniversalBudgetPage />} />
+        <Route path="/relativite-restreinte-echelles/pivot-temporel" element={<PivotTemporelPage />} />
+        <Route path="/relativite-restreinte-echelles/tapis-roulant" element={<TapisRoulantRestrictedPage />} />
         <Route path="/relativite-restreinte-echelles/immobile" element={<ImmobileStatePage />} />
         <Route path="/relativite-restreinte-echelles/vitesse-extreme" element={<ExtremSpeedPage />} />
         <Route path="/relativite-restreinte-echelles/liberte-spatiale" element={<SpatialFreedomPage />} />
