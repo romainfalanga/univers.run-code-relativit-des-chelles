@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export const UniversalTreadmillsPage: React.FC = () => {
   React.useEffect(() => {
@@ -108,6 +108,23 @@ export const UniversalTreadmillsPage: React.FC = () => {
                 C'est une symphonie cosmique où tous les instruments jouent la même note, mais avec des harmoniques différentes. L'univers entier est une chorégraphie d'escalators invisibles, tous synchronisés mais tous uniques.
               </p>
             </div>
+          </div>
+
+          <div className="flex justify-between items-center">
+            <Link
+              to="/experiences-pensee-echelles/musee-dimensions"
+              className="group flex items-center px-6 py-3 bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-500 hover:to-gray-600 text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
+              Précédent
+            </Link>
+            <Link
+              to="/experiences-pensee-echelles/illusion-expansion"
+              className="group flex items-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Suivant
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
 
         </div>

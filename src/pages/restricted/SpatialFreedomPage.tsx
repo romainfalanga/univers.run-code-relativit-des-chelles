@@ -120,6 +120,17 @@ export const SpatialFreedomPage: React.FC = () => {
             </div>
           </div>
 
+          <div className="flex justify-between items-center">
+            <Link
+              to="/relativite-restreinte-echelles/vitesse-extreme"
+              className="group flex items-center px-6 py-3 bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-500 hover:to-gray-600 text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              <ArrowLeft className="w-5 h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
+              Précédent
+            </Link>
+            <div className="w-32"></div>
+          </div>
+
         </div>
       </div>
     </div>

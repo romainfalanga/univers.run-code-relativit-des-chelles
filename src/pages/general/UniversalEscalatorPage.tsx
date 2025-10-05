@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export const UniversalEscalatorPage: React.FC = () => {
   React.useEffect(() => {
@@ -87,6 +87,17 @@ export const UniversalEscalatorPage: React.FC = () => {
                 </p>
               </div>
             </div>
+          </div>
+
+          <div className="flex justify-between items-center">
+            <div className="w-32"></div>
+            <Link
+              to="/relativite-generale-echelles/environnements"
+              className="group flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
+            >
+              Suivant
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
 
         </div>

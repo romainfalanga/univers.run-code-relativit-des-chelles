@@ -17,12 +17,12 @@ interface NavigationHubProps {
 
 export const NavigationHub: React.FC<NavigationHubProps> = ({ cards }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="flex flex-col gap-6 max-w-4xl mx-auto">
       {cards.map((card, index) => (
         <Link
           key={index}
           to={card.path}
-          className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 hover:bg-white/15"
+          className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-[1.02] hover:bg-white/15"
         >
           <div className={`bg-gradient-to-r ${card.colorFrom} ${card.colorTo} p-4 rounded-lg border-l-4 ${card.borderColor} mb-4`}>
             <h3 className="text-xl font-bold text-white mb-2">{card.title}</h3>

@@ -83,7 +83,7 @@ export const UniversalBudgetPage: React.FC = () => {
           <div className="flex justify-between items-center">
             <div className="w-32"></div>
             <Link
-              to="/relativite-restreinte-echelles/presque-immobile"
+              to="/relativite-restreinte-echelles/immobile"
               className="group flex items-center px-6 py-3 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
               Suivant
