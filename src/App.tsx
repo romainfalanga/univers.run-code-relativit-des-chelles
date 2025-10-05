@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
+import { Footer } from './components/Footer';
 import { ClassicalRelativityPage } from './pages/ClassicalRelativityPage';
 import { RelativityCalculatorPage } from './pages/RelativityCalculatorPage';
 import { GeneralRelativityPage } from './pages/GeneralRelativityPage';
@@ -23,9 +24,9 @@ import { ExpansionHubPage, IllusionExpansionPage, HubbleLawPage, CosmicRadiation
 const AppContent: React.FC = () => {
 
   return (
-    <div className="relative">
+    <div className="relative pb-24">
       <Navigation />
-      
+
       <Routes>
         <Route path="/" element={<CodeUniversePage />} />
         <Route path="/code-univers" element={<CodeUniversePage />} />
@@ -77,6 +78,8 @@ const AppContent: React.FC = () => {
         <Route path="/trous-noirs-echelles/invisibilite" element={<InvisibilityPage />} />
         <Route path="/trous-noirs-echelles/derriere-horizon" element={<BehindHorizonPage />} />
       </Routes>
+
+      <Footer />
     </div>
   );
 };
