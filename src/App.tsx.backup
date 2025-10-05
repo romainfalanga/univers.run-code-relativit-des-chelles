@@ -15,13 +15,13 @@ import { RestrictedScaleRelativityPage } from './pages/RestrictedScaleRelativity
 import { GeneralScaleRelativityPage } from './pages/GeneralScaleRelativityPage';
 import { ThoughtExperimentsScalePage } from './pages/ThoughtExperimentsScalePage';
 import { BlackHolesScalePage } from './pages/BlackHolesScalePage';
-import { BlackHolesHubPage, CreationPage, PassagePage, WhyNoReturnPage, QuantumUniverseSizePage, InternalUniversesPage, HarmonyDescentPage, SingularityPage, EventHorizonPage, InvisibilityPage, BehindHorizonPage } from './pages/blackholes';
-import { RestrictedScaleRelativityHubPage, UniversalBudgetPage } from './pages/restricted';
 
+// Composant pour gérer la navigation conditionnelle
 const AppContent: React.FC = () => {
 
   return (
     <div className="relative">
+      {/* Navigation toujours affichée */}
       <Navigation />
       
       <Routes>
@@ -35,26 +35,10 @@ const AppContent: React.FC = () => {
         <Route path="/scale-lab" element={<ScaleLabPage />} />
         <Route path="/relativite-echelles" element={<ScaleRelativityPage />} />
         <Route path="/tissu-espace-temps-echelle" element={<SpaceTimeScaleFabricPage />} />
-        
-        <Route path="/relativite-restreinte-echelles-old" element={<RestrictedScaleRelativityPage />} />
-        <Route path="/relativite-restreinte-echelles" element={<RestrictedScaleRelativityHubPage />} />
-        <Route path="/relativite-restreinte-echelles/budget-universel" element={<UniversalBudgetPage />} />
-        
+        <Route path="/relativite-restreinte-echelles" element={<RestrictedScaleRelativityPage />} />
         <Route path="/relativite-generale-echelles" element={<GeneralScaleRelativityPage />} />
         <Route path="/experiences-pensee-echelles" element={<ThoughtExperimentsScalePage />} />
-        
-        <Route path="/trous-noirs-echelles-old" element={<BlackHolesScalePage />} />
-        <Route path="/trous-noirs-echelles" element={<BlackHolesHubPage />} />
-        <Route path="/trous-noirs-echelles/creation" element={<CreationPage />} />
-        <Route path="/trous-noirs-echelles/passage" element={<PassagePage />} />
-        <Route path="/trous-noirs-echelles/retour-impossible" element={<WhyNoReturnPage />} />
-        <Route path="/trous-noirs-echelles/taille-univers" element={<QuantumUniverseSizePage />} />
-        <Route path="/trous-noirs-echelles/univers-internes" element={<InternalUniversesPage />} />
-        <Route path="/trous-noirs-echelles/harmonie" element={<HarmonyDescentPage />} />
-        <Route path="/trous-noirs-echelles/singularite" element={<SingularityPage />} />
-        <Route path="/trous-noirs-echelles/horizon" element={<EventHorizonPage />} />
-        <Route path="/trous-noirs-echelles/invisibilite" element={<InvisibilityPage />} />
-        <Route path="/trous-noirs-echelles/derriere-horizon" element={<BehindHorizonPage />} />
+        <Route path="/trous-noirs-echelles" element={<BlackHolesScalePage />} />
       </Routes>
     </div>
   );
