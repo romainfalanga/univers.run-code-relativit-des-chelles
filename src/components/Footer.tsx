@@ -253,18 +253,41 @@ export const Footer: React.FC = () => {
 
                 {section.subPages.length > 0 && (
                   <div className="ml-4 sm:ml-6 space-y-2">
-                    {section.subPages.map((subPage, subIndex) => (
-                      <Link
-                        key={subIndex}
-                        to={subPage.path}
-                        onClick={() => setIsMenuOpen(false)}
-                        className="block p-3 sm:p-4 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:translate-x-2"
-                      >
-                        <p className="text-sm sm:text-base text-gray-200 hover:text-white transition-colors">
-                          {subPage.title}
-                        </p>
-                      </Link>
-                    ))}
+                    {section.subPages.map((subPage, subIndex) => {
+                      const isActive = location.pathname === subPage.path;
+                      return (
+                        <Link
+                          key={subIndex}
+                          to={subPage.path}
+                          onClick={() => setIsMenuOpen(false)}
+                          className={`relative block p-3 sm:p-4 rounded-lg border transition-all duration-300 transform hover:translate-x-2 ${
+                            isActive
+                              ? 'bg-gradient-to-r from-amber-900/40 via-yellow-900/30 to-amber-900/40 border-amber-400/40 hover:border-amber-400/60 shadow-[0_0_20px_rgba(251,191,36,0.3)] hover:shadow-[0_0_30px_rgba(251,191,36,0.4)]'
+                              : 'bg-white/5 hover:bg-white/10 border-white/10 hover:border-white/20'
+                          }`}
+                        >
+                          {isActive && (
+                            <>
+                              <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(251,191,36,0.1)_1px,transparent_1px),linear-gradient(rgba(251,191,36,0.1)_1px,transparent_1px)] bg-[size:15px_15px] rounded-lg opacity-30"></div>
+
+                              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-500/10 via-yellow-500/10 to-transparent bg-[length:200%_100%] animate-gradient-x rounded-lg"></div>
+
+                              <div className="absolute inset-0 rounded-lg border border-amber-400/20 shadow-[0_0_15px_rgba(251,191,36,0.2)]"></div>
+
+                              <div className="absolute -inset-1 bg-gradient-to-r from-amber-600/20 via-yellow-600/20 to-amber-600/20 rounded-lg blur-md animate-pulse opacity-40"></div>
+                            </>
+                          )}
+
+                          <p className={`relative z-10 text-sm sm:text-base transition-colors ${
+                            isActive
+                              ? 'text-amber-200 font-semibold'
+                              : 'text-gray-200 hover:text-white'
+                          }`}>
+                            {subPage.title}
+                          </p>
+                        </Link>
+                      );
+                    })}
                   </div>
                 )}
               </div>
