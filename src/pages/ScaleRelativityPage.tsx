@@ -283,13 +283,6 @@ export const ScaleRelativityPage: React.FC = () => {
                 </p>
               </div>
               
-              <div className="bg-gradient-to-r from-orange-900/40 to-red-900/30 p-4 sm:p-6 rounded-lg border-l-4 border-orange-400">
-                <h3 className="text-lg sm:text-xl font-semibold text-orange-200 mb-3">Le Rayonnement Cosmique</h3>
-                <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
-                  Le rayonnement agit comme une pression permanente qui incline le tapis roulant partout dans l'univers. <strong className="text-white">Plus une région reçoit de rayonnement, plus son tapis roulant s'incline</strong>.
-                </p>
-              </div>
-              
               <div className="bg-gradient-to-r from-blue-900/40 to-cyan-900/30 p-4 sm:p-6 rounded-lg border-l-4 border-blue-400">
                 <h3 className="text-lg sm:text-xl font-semibold text-blue-200 mb-3">L'Énergie Sombre Réexaminée</h3>
                 <p className="text-sm sm:text-base text-gray-200 leading-relaxed">

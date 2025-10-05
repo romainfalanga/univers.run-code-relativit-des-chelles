@@ -16,10 +16,10 @@ import { GeneralScaleRelativityPage } from './pages/GeneralScaleRelativityPage';
 import { ThoughtExperimentsScalePage } from './pages/ThoughtExperimentsScalePage';
 import { BlackHolesScalePage } from './pages/BlackHolesScalePage';
 import { BlackHolesHubPage, CreationPage, PassagePage, WhyNoReturnPage, QuantumUniverseSizePage, InternalUniversesPage, HarmonyDescentPage, SingularityPage, EventHorizonPage, InvisibilityPage, BehindHorizonPage } from './pages/blackholes';
-import { RestrictedScaleRelativityHubPage, UniversalBudgetPage, ImmobileStatePage, ExtremSpeedPage, SpatialFreedomPage, PivotTemporelPage, TapisRoulantRestrictedPage } from './pages/restricted';
+import { RestrictedScaleRelativityHubPage, UniversalBudgetPage, ImmobileStatePage, ExtremSpeedPage, PivotTemporelPage, TapisRoulantRestrictedPage } from './pages/restricted';
 import { GeneralScaleRelativityHubPage, UniversalEscalatorPage, EnvironmentsPage } from './pages/general';
 import { DimensionsMuseumPage, MuseumEntrancePage, FirstRoomPage } from './pages/experiments';
-import { ExpansionHubPage, IllusionExpansionPage, HubbleLawPage, CosmicRadiationPage, DarkEnergyPage } from './pages/expansion';
+import { ExpansionHubPage, IllusionExpansionPage, HubbleLawPage, DarkEnergyPage } from './pages/expansion';
 import { SuperpositionTissusPage, TapisRoulantFabricPage } from './pages/fabric';
 import { TreadmillsHubPage } from './pages/scale';
 
@@ -51,7 +51,6 @@ const AppContent: React.FC = () => {
         <Route path="/relativite-restreinte-echelles/tapis-roulant" element={<TapisRoulantRestrictedPage />} />
         <Route path="/relativite-restreinte-echelles/immobile" element={<ImmobileStatePage />} />
         <Route path="/relativite-restreinte-echelles/vitesse-extreme" element={<ExtremSpeedPage />} />
-        <Route path="/relativite-restreinte-echelles/liberte-spatiale" element={<SpatialFreedomPage />} />
 
         <Route path="/relativite-generale-echelles-old" element={<GeneralScaleRelativityPage />} />
         <Route path="/relativite-generale-echelles" element={<GeneralScaleRelativityHubPage />} />
@@ -68,7 +67,6 @@ const AppContent: React.FC = () => {
         <Route path="/expansion-interne" element={<ExpansionHubPage />} />
         <Route path="/expansion-interne/illusion-expansion" element={<IllusionExpansionPage />} />
         <Route path="/expansion-interne/loi-hubble" element={<HubbleLawPage />} />
-        <Route path="/expansion-interne/rayonnement-cosmique" element={<CosmicRadiationPage />} />
         <Route path="/expansion-interne/energie-sombre" element={<DarkEnergyPage />} />
         
         <Route path="/trous-noirs-echelles-old" element={<BlackHolesScalePage />} />

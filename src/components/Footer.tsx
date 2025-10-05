@@ -33,8 +33,7 @@ export const Footer: React.FC = () => {
         { title: "Le Pivot Temporel", path: "/relativite-restreinte-echelles/pivot-temporel" },
         { title: "Le Tapis Roulant", path: "/relativite-restreinte-echelles/tapis-roulant" },
         { title: "Situation : Presque Immobile", path: "/relativite-restreinte-echelles/immobile" },
-        { title: "Situation : Vitesse Extrêmement Rapide", path: "/relativite-restreinte-echelles/vitesse-extreme" },
-        { title: "La Liberté Spatiale", path: "/relativite-restreinte-echelles/liberte-spatiale" }
+        { title: "Situation : Vitesse Extrêmement Rapide", path: "/relativite-restreinte-echelles/vitesse-extreme" }
       ]
     },
     {
@@ -76,7 +75,6 @@ export const Footer: React.FC = () => {
       subPages: [
         { title: "L'Illusion de l'Expansion", path: "/expansion-interne/illusion-expansion" },
         { title: "La Loi de Hubble Réinterprétée", path: "/expansion-interne/loi-hubble" },
-        { title: "Le Rayonnement Cosmique", path: "/expansion-interne/rayonnement-cosmique" },
         { title: "L'Énergie Sombre Réexaminée", path: "/expansion-interne/energie-sombre" }
       ]
     },
