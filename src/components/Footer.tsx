@@ -181,10 +181,10 @@ export const Footer: React.FC = () => {
       </nav>
 
       <div
-        className={`fixed bottom-0 left-0 right-0 bg-gradient-to-br from-slate-900/98 via-emerald-900/98 to-teal-900/98 backdrop-blur-2xl border-t-2 border-emerald-400/40 shadow-2xl transition-all duration-700 ease-in-out z-[99999] overflow-hidden ${
+        className={`fixed top-0 bottom-0 left-0 right-0 bg-gradient-to-br from-slate-900/98 via-emerald-900/98 to-teal-900/98 backdrop-blur-2xl shadow-2xl transition-all duration-700 ease-in-out z-[99999] overflow-hidden ${
           isMenuOpen
-            ? 'h-[80vh] opacity-100 visible overflow-y-auto pointer-events-auto'
-            : 'h-0 opacity-0 invisible overflow-hidden pointer-events-none'
+            ? 'opacity-100 visible overflow-y-auto pointer-events-auto'
+            : 'opacity-0 invisible overflow-hidden pointer-events-none'
         }`}
         style={{ zIndex: 99999 }}
         onClick={(e) => {
