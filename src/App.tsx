@@ -16,7 +16,10 @@ import { GeneralScaleRelativityPage } from './pages/GeneralScaleRelativityPage';
 import { ThoughtExperimentsScalePage } from './pages/ThoughtExperimentsScalePage';
 import { BlackHolesScalePage } from './pages/BlackHolesScalePage';
 import { BlackHolesHubPage, CreationPage, PassagePage, WhyNoReturnPage, QuantumUniverseSizePage, InternalUniversesPage, HarmonyDescentPage, SingularityPage, EventHorizonPage, InvisibilityPage, BehindHorizonPage } from './pages/blackholes';
-import { RestrictedScaleRelativityHubPage, UniversalBudgetPage } from './pages/restricted';
+import { RestrictedScaleRelativityHubPage, UniversalBudgetPage, ImmobileStatePage, ExtremSpeedPage, SpatialFreedomPage } from './pages/restricted';
+import { SpaceTimeFabricHubPage, SuperpositionPage, UniversalEnginePage, TemporalPivotPage } from './pages/spacetime-fabric';
+import { GeneralScaleRelativityHubPage, UniversalEscalatorPage, EnvironmentsPage, RadiationEffectPage, MultiplierCoefficientPage } from './pages/general';
+import { ThoughtExperimentsHubPage, DimensionsMuseumPage, UniversalTreadmillsPage, ExpansionIllusionPage } from './pages/experiments';
 
 const AppContent: React.FC = () => {
 
@@ -34,14 +37,32 @@ const AppContent: React.FC = () => {
         <Route path="/quantum-lab" element={<QuantumLabPage />} />
         <Route path="/scale-lab" element={<ScaleLabPage />} />
         <Route path="/relativite-echelles" element={<ScaleRelativityPage />} />
-        <Route path="/tissu-espace-temps-echelle" element={<SpaceTimeScaleFabricPage />} />
-        
+
+        <Route path="/tissu-espace-temps-echelle-old" element={<SpaceTimeScaleFabricPage />} />
+        <Route path="/tissu-espace-temps-echelle" element={<SpaceTimeFabricHubPage />} />
+        <Route path="/tissu-espace-temps-echelle/superposition" element={<SuperpositionPage />} />
+        <Route path="/tissu-espace-temps-echelle/moteur-universel" element={<UniversalEnginePage />} />
+        <Route path="/tissu-espace-temps-echelle/pivot-temporel" element={<TemporalPivotPage />} />
+
         <Route path="/relativite-restreinte-echelles-old" element={<RestrictedScaleRelativityPage />} />
         <Route path="/relativite-restreinte-echelles" element={<RestrictedScaleRelativityHubPage />} />
         <Route path="/relativite-restreinte-echelles/budget-universel" element={<UniversalBudgetPage />} />
-        
-        <Route path="/relativite-generale-echelles" element={<GeneralScaleRelativityPage />} />
-        <Route path="/experiences-pensee-echelles" element={<ThoughtExperimentsScalePage />} />
+        <Route path="/relativite-restreinte-echelles/immobile" element={<ImmobileStatePage />} />
+        <Route path="/relativite-restreinte-echelles/vitesse-extreme" element={<ExtremSpeedPage />} />
+        <Route path="/relativite-restreinte-echelles/liberte-spatiale" element={<SpatialFreedomPage />} />
+
+        <Route path="/relativite-generale-echelles-old" element={<GeneralScaleRelativityPage />} />
+        <Route path="/relativite-generale-echelles" element={<GeneralScaleRelativityHubPage />} />
+        <Route path="/relativite-generale-echelles/escalator-universel" element={<UniversalEscalatorPage />} />
+        <Route path="/relativite-generale-echelles/environnements" element={<EnvironmentsPage />} />
+        <Route path="/relativite-generale-echelles/effet-rayonnement" element={<RadiationEffectPage />} />
+        <Route path="/relativite-generale-echelles/coefficient-multiplicateur" element={<MultiplierCoefficientPage />} />
+
+        <Route path="/experiences-pensee-echelles-old" element={<ThoughtExperimentsScalePage />} />
+        <Route path="/experiences-pensee-echelles" element={<ThoughtExperimentsHubPage />} />
+        <Route path="/experiences-pensee-echelles/musee-dimensions" element={<DimensionsMuseumPage />} />
+        <Route path="/experiences-pensee-echelles/tapis-roulants" element={<UniversalTreadmillsPage />} />
+        <Route path="/experiences-pensee-echelles/illusion-expansion" element={<ExpansionIllusionPage />} />
         
         <Route path="/trous-noirs-echelles-old" element={<BlackHolesScalePage />} />
         <Route path="/trous-noirs-echelles" element={<BlackHolesHubPage />} />
