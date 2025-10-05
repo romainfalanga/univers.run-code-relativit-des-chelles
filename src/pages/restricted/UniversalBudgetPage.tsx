@@ -1,10 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { markPageAsVisited } from '../../utils/pageVisits';
 
 export const UniversalBudgetPage: React.FC = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
+    markPageAsVisited('/relativite-restreinte-echelles/budget-universel');
   }, []);
 
   return (
