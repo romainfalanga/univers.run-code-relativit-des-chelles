@@ -17,10 +17,11 @@ import { ThoughtExperimentsScalePage } from './pages/ThoughtExperimentsScalePage
 import { BlackHolesScalePage } from './pages/BlackHolesScalePage';
 import { BlackHolesHubPage, CreationPage, PassagePage, WhyNoReturnPage, QuantumUniverseSizePage, InternalUniversesPage, HarmonyDescentPage, SingularityPage, EventHorizonPage, InvisibilityPage, BehindHorizonPage } from './pages/blackholes';
 import { RestrictedScaleRelativityHubPage, UniversalBudgetPage, ImmobileStatePage, ExtremSpeedPage, SpatialFreedomPage, PivotTemporelPage, TapisRoulantRestrictedPage } from './pages/restricted';
-import { GeneralScaleRelativityHubPage, UniversalEscalatorPage, EnvironmentsPage, RadiationEffectPage, MultiplierCoefficientPage } from './pages/general';
+import { GeneralScaleRelativityHubPage, UniversalEscalatorPage, EnvironmentsPage } from './pages/general';
 import { ThoughtExperimentsHubPage, DimensionsMuseumPage, UniversalTreadmillsPage } from './pages/experiments';
 import { ExpansionHubPage, IllusionExpansionPage, HubbleLawPage, CosmicRadiationPage, DarkEnergyPage } from './pages/expansion';
 import { SuperpositionTissusPage, TapisRoulantFabricPage } from './pages/fabric';
+import { ScaleRelativityHubPage, UniversalMotorPage, UnifiedTreadmillPage, FormulaPage } from './pages/scale';
 
 const AppContent: React.FC = () => {
 
@@ -56,8 +57,11 @@ const AppContent: React.FC = () => {
         <Route path="/relativite-generale-echelles" element={<GeneralScaleRelativityHubPage />} />
         <Route path="/relativite-generale-echelles/escalator-universel" element={<UniversalEscalatorPage />} />
         <Route path="/relativite-generale-echelles/environnements" element={<EnvironmentsPage />} />
-        <Route path="/relativite-generale-echelles/effet-rayonnement" element={<RadiationEffectPage />} />
-        <Route path="/relativite-generale-echelles/coefficient-multiplicateur" element={<MultiplierCoefficientPage />} />
+
+        <Route path="/relativite-echelles-final" element={<ScaleRelativityHubPage />} />
+        <Route path="/relativite-echelles-final/moteur-universel" element={<UniversalMotorPage />} />
+        <Route path="/relativite-echelles-final/tapis-roulant" element={<UnifiedTreadmillPage />} />
+        <Route path="/relativite-echelles-final/formule" element={<FormulaPage />} />
 
         <Route path="/experiences-pensee-echelles-old" element={<ThoughtExperimentsScalePage />} />
         <Route path="/experiences-pensee-echelles" element={<ThoughtExperimentsHubPage />} />
