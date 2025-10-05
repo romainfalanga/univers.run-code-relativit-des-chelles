@@ -1,5 +1,6 @@
 import React from 'react';
-import { VisitedButton } from '../components/VisitedButton';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
 export const ScaleRelativityPage: React.FC = () => {
   // Force le re-rendu propre de la page
@@ -91,12 +92,13 @@ export const ScaleRelativityPage: React.FC = () => {
               </div>
               
               <div className="flex justify-center mt-6">
-                <VisitedButton
+                <Link
                   to="/tissu-espace-temps-echelle"
-                  className="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 hover:shadow-emerald-500/25"
+                  className="group flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-emerald-500/25"
                 >
                   Le Tissu d'Espace-Temps-d'Échelle
-                </VisitedButton>
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
           </div>
@@ -135,12 +137,13 @@ export const ScaleRelativityPage: React.FC = () => {
               </div>
               
               <div className="flex justify-center mt-6">
-                <VisitedButton
+                <Link
                   to="/relativite-restreinte-echelles"
-                  className="bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 hover:shadow-cyan-500/25"
+                  className="group flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
                 >
                   Relativité Restreinte des Échelles
-                </VisitedButton>
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
           </div>
@@ -182,12 +185,13 @@ export const ScaleRelativityPage: React.FC = () => {
               </div>
               
               <div className="flex justify-center mt-6">
-                <VisitedButton
+                <Link
                   to="/relativite-generale-echelles"
-                  className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 hover:shadow-purple-500/25"
+                  className="group flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
                 >
                   Relativité Générale des Échelles
-                </VisitedButton>
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
           </div>
@@ -216,12 +220,13 @@ export const ScaleRelativityPage: React.FC = () => {
               </div>
               
               <div className="flex justify-center mt-6">
-                <VisitedButton
+                <Link
                   to="/experiences-pensee-echelles"
-                  className="bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 hover:shadow-orange-500/25"
+                  className="group flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-500 hover:to-red-500 text-white rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-orange-500/25"
                 >
                   Les Expériences de Pensée
-                </VisitedButton>
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
           </div>
@@ -266,12 +271,13 @@ export const ScaleRelativityPage: React.FC = () => {
               </div>
               
               <div className="flex justify-center mt-6">
-                <VisitedButton
+                <Link
                   to="/expansion-interne"
-                  className="bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 hover:shadow-indigo-500/25"
+                  className="group flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25"
                 >
                   L'Expansion Interne
-                </VisitedButton>
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
           </div>
@@ -312,12 +318,13 @@ export const ScaleRelativityPage: React.FC = () => {
               </div>
               
               <div className="flex justify-center mt-6">
-                <VisitedButton
+                <Link
                   to="/trous-noirs-echelles"
-                  className="bg-gradient-to-r from-gray-600 to-black hover:from-gray-500 hover:to-gray-800 hover:shadow-gray-500/25"
+                  className="group flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-gray-600 to-black hover:from-gray-500 hover:to-gray-800 text-white rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-gray-500/25"
                 >
                   Les Trous Noirs
-                </VisitedButton>
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
               </div>
             </div>
           </div>

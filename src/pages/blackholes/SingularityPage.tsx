@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { markPageAsVisited } from '../../utils/pageVisits';
 
 export const SingularityPage: React.FC = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
-    markPageAsVisited('/trous-noirs-echelles/singularite');
   }, []);
 
   return (
