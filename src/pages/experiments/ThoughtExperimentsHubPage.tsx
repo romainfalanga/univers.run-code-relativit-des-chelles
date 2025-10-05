@@ -24,14 +24,6 @@ export const ThoughtExperimentsHubPage: React.FC = () => {
       colorFrom: "from-red-900/40",
       colorTo: "to-pink-900/30",
       borderColor: "border-red-400"
-    },
-    {
-      title: "L'Illusion de l'Expansion",
-      description: "Pourquoi l'univers semble s'étendre alors qu'il se contracte",
-      path: "/experiences-pensee-echelles/illusion-expansion",
-      colorFrom: "from-indigo-900/40",
-      colorTo: "to-purple-900/30",
-      borderColor: "border-indigo-400"
     }
   ];
 

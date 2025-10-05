@@ -232,6 +232,55 @@ export const ScaleRelativityPage: React.FC = () => {
           </div>
 
           {/* Section Les Trous Noirs */}
+
+          {/* Section L'Expansion */}
+          <div className="bg-gradient-to-br from-indigo-900/40 to-purple-900/30 backdrop-blur-sm rounded-xl lg:rounded-2xl p-6 sm:p-8 border border-indigo-400/30 shadow-2xl">
+            <div className="mb-4 sm:mb-6">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-indigo-300 mb-4">
+                L'Expansion
+              </h2>
+            </div>
+            
+            <div className="space-y-4 sm:space-y-6">
+              <div className="bg-indigo-900/20 p-4 sm:p-6 rounded-lg border-l-4 border-indigo-400">
+                <h3 className="text-lg sm:text-xl font-semibold text-indigo-200 mb-3">L'Illusion de l'Expansion</h3>
+                <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
+                  Ce que nous appelons "expansion de l'univers" pourrait être une illusion de perspective. <strong className="text-white">Ce n'est pas l'espace qui grandit, mais l'échelle qui se contracte</strong>.
+                </p>
+              </div>
+              
+              <div className="bg-purple-900/20 p-4 sm:p-6 rounded-lg border-l-4 border-purple-400">
+                <h3 className="text-lg sm:text-xl font-semibold text-purple-200 mb-3">La Loi de Hubble Réinterprétée</h3>
+                <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
+                  La constante de Hubble — 70 km/s par mégaparsec — n'est que <strong className="text-white">la traduction visible de cette réduction d'échelle par seconde</strong>. Plus une galaxie est loin, plus le rayonnement cumulé a incliné nos tapis roulants.
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-orange-900/40 to-red-900/30 p-4 sm:p-6 rounded-lg border-l-4 border-orange-400">
+                <h3 className="text-lg sm:text-xl font-semibold text-orange-200 mb-3">Le Rayonnement Cosmique</h3>
+                <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
+                  Le rayonnement agit comme une pression permanente qui incline le tapis roulant partout dans l'univers. <strong className="text-white">Plus une région reçoit de rayonnement, plus son tapis roulant s'incline</strong>.
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-r from-blue-900/40 to-cyan-900/30 p-4 sm:p-6 rounded-lg border-l-4 border-blue-400">
+                <h3 className="text-lg sm:text-xl font-semibold text-blue-200 mb-3">L'Énergie Sombre Réexaminée</h3>
+                <p className="text-sm sm:text-base text-gray-200 leading-relaxed">
+                  L'accélération apparente de l'expansion s'explique naturellement sans recourir à l'énergie sombre. <strong className="text-white">La descente d'échelle non-linéaire crée naturellement l'apparence d'une accélération</strong>.
+                </p>
+              </div>
+              
+              <div className="flex justify-center mt-6">
+                <Link
+                  to="/expansion-interne"
+                  className="group flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-indigo-500/25"
+                >
+                  L'Expansion Interne
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+              </div>
+            </div>
+          </div>
           <div className="bg-gradient-to-br from-gray-900/60 to-black/50 backdrop-blur-sm rounded-xl lg:rounded-2xl p-6 sm:p-8 border border-gray-400/30 shadow-2xl">
             <div className="mb-4 sm:mb-6">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-300 mb-4">

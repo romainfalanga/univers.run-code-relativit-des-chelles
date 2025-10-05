@@ -19,7 +19,8 @@ import { BlackHolesHubPage, CreationPage, PassagePage, WhyNoReturnPage, QuantumU
 import { RestrictedScaleRelativityHubPage, UniversalBudgetPage, ImmobileStatePage, ExtremSpeedPage, SpatialFreedomPage } from './pages/restricted';
 import { SpaceTimeFabricHubPage, SuperpositionPage, UniversalEnginePage, TemporalPivotPage } from './pages/spacetime-fabric';
 import { GeneralScaleRelativityHubPage, UniversalEscalatorPage, EnvironmentsPage, RadiationEffectPage, MultiplierCoefficientPage } from './pages/general';
-import { ThoughtExperimentsHubPage, DimensionsMuseumPage, UniversalTreadmillsPage, ExpansionIllusionPage } from './pages/experiments';
+import { ThoughtExperimentsHubPage, DimensionsMuseumPage, UniversalTreadmillsPage } from './pages/experiments';
+import { ExpansionHubPage, IllusionExpansionPage, HubbleLawPage, CosmicRadiationPage, DarkEnergyPage } from './pages/expansion';
 
 const AppContent: React.FC = () => {
 
@@ -62,7 +63,12 @@ const AppContent: React.FC = () => {
         <Route path="/experiences-pensee-echelles" element={<ThoughtExperimentsHubPage />} />
         <Route path="/experiences-pensee-echelles/musee-dimensions" element={<DimensionsMuseumPage />} />
         <Route path="/experiences-pensee-echelles/tapis-roulants" element={<UniversalTreadmillsPage />} />
-        <Route path="/experiences-pensee-echelles/illusion-expansion" element={<ExpansionIllusionPage />} />
+        
+        <Route path="/expansion-interne" element={<ExpansionHubPage />} />
+        <Route path="/expansion-interne/illusion-expansion" element={<IllusionExpansionPage />} />
+        <Route path="/expansion-interne/loi-hubble" element={<HubbleLawPage />} />
+        <Route path="/expansion-interne/rayonnement-cosmique" element={<CosmicRadiationPage />} />
+        <Route path="/expansion-interne/energie-sombre" element={<DarkEnergyPage />} />
         
         <Route path="/trous-noirs-echelles-old" element={<BlackHolesScalePage />} />
         <Route path="/trous-noirs-echelles" element={<BlackHolesHubPage />} />
