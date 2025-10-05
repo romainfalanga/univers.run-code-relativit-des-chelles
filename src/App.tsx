@@ -18,10 +18,10 @@ import { BlackHolesScalePage } from './pages/BlackHolesScalePage';
 import { BlackHolesHubPage, CreationPage, PassagePage, WhyNoReturnPage, QuantumUniverseSizePage, InternalUniversesPage, HarmonyDescentPage, SingularityPage, EventHorizonPage, InvisibilityPage, BehindHorizonPage } from './pages/blackholes';
 import { RestrictedScaleRelativityHubPage, UniversalBudgetPage, ImmobileStatePage, ExtremSpeedPage, SpatialFreedomPage, PivotTemporelPage, TapisRoulantRestrictedPage } from './pages/restricted';
 import { GeneralScaleRelativityHubPage, UniversalEscalatorPage, EnvironmentsPage } from './pages/general';
-import { ThoughtExperimentsHubPage, DimensionsMuseumPage, UniversalTreadmillsPage } from './pages/experiments';
+import { DimensionsMuseumPage, MuseumEntrancePage, FirstRoomPage } from './pages/experiments';
 import { ExpansionHubPage, IllusionExpansionPage, HubbleLawPage, CosmicRadiationPage, DarkEnergyPage } from './pages/expansion';
 import { SuperpositionTissusPage, TapisRoulantFabricPage } from './pages/fabric';
-import { ScaleRelativityHubPage, UniversalMotorPage, UnifiedTreadmillPage, FormulaPage } from './pages/scale';
+import { TreadmillsHubPage } from './pages/scale';
 
 const AppContent: React.FC = () => {
 
@@ -58,15 +58,12 @@ const AppContent: React.FC = () => {
         <Route path="/relativite-generale-echelles/escalator-universel" element={<UniversalEscalatorPage />} />
         <Route path="/relativite-generale-echelles/environnements" element={<EnvironmentsPage />} />
 
-        <Route path="/relativite-echelles-final" element={<ScaleRelativityHubPage />} />
-        <Route path="/relativite-echelles-final/moteur-universel" element={<UniversalMotorPage />} />
-        <Route path="/relativite-echelles-final/tapis-roulant" element={<UnifiedTreadmillPage />} />
-        <Route path="/relativite-echelles-final/formule" element={<FormulaPage />} />
+        <Route path="/relativite-echelles-final" element={<TreadmillsHubPage />} />
 
         <Route path="/experiences-pensee-echelles-old" element={<ThoughtExperimentsScalePage />} />
-        <Route path="/experiences-pensee-echelles" element={<ThoughtExperimentsHubPage />} />
-        <Route path="/experiences-pensee-echelles/musee-dimensions" element={<DimensionsMuseumPage />} />
-        <Route path="/experiences-pensee-echelles/tapis-roulants" element={<UniversalTreadmillsPage />} />
+        <Route path="/experiences-pensee-echelles" element={<DimensionsMuseumPage />} />
+        <Route path="/experiences-pensee-echelles/entree-musee" element={<MuseumEntrancePage />} />
+        <Route path="/experiences-pensee-echelles/premiere-piece" element={<FirstRoomPage />} />
         
         <Route path="/expansion-interne" element={<ExpansionHubPage />} />
         <Route path="/expansion-interne/illusion-expansion" element={<IllusionExpansionPage />} />
