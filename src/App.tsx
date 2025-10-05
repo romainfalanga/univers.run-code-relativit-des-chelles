@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useLocation } from 'react-router-dom';
 import { Navigation } from './components/Navigation';
 import { ClassicalRelativityPage } from './pages/ClassicalRelativityPage';
 import { RelativityCalculatorPage } from './pages/RelativityCalculatorPage';
@@ -17,7 +16,6 @@ import { ThoughtExperimentsScalePage } from './pages/ThoughtExperimentsScalePage
 import { BlackHolesScalePage } from './pages/BlackHolesScalePage';
 import { BlackHolesHubPage, CreationPage, PassagePage, WhyNoReturnPage, QuantumUniverseSizePage, InternalUniversesPage, HarmonyDescentPage, SingularityPage, EventHorizonPage, InvisibilityPage, BehindHorizonPage } from './pages/blackholes';
 import { RestrictedScaleRelativityHubPage, UniversalBudgetPage, ImmobileStatePage, ExtremSpeedPage, SpatialFreedomPage } from './pages/restricted';
-import { SpaceTimeFabricHubPage, SuperpositionPage, UniversalEnginePage, TemporalPivotPage } from './pages/spacetime-fabric';
 import { GeneralScaleRelativityHubPage, UniversalEscalatorPage, EnvironmentsPage, RadiationEffectPage, MultiplierCoefficientPage } from './pages/general';
 import { ThoughtExperimentsHubPage, DimensionsMuseumPage, UniversalTreadmillsPage } from './pages/experiments';
 import { ExpansionHubPage, IllusionExpansionPage, HubbleLawPage, CosmicRadiationPage, DarkEnergyPage } from './pages/expansion';
@@ -39,11 +37,7 @@ const AppContent: React.FC = () => {
         <Route path="/scale-lab" element={<ScaleLabPage />} />
         <Route path="/relativite-echelles" element={<ScaleRelativityPage />} />
 
-        <Route path="/tissu-espace-temps-echelle-old" element={<SpaceTimeScaleFabricPage />} />
-        <Route path="/tissu-espace-temps-echelle" element={<SpaceTimeFabricHubPage />} />
-        <Route path="/tissu-espace-temps-echelle/superposition" element={<SuperpositionPage />} />
-        <Route path="/tissu-espace-temps-echelle/moteur-universel" element={<UniversalEnginePage />} />
-        <Route path="/tissu-espace-temps-echelle/pivot-temporel" element={<TemporalPivotPage />} />
+        <Route path="/tissu-espace-temps-echelle" element={<SpaceTimeScaleFabricPage />} />
 
         <Route path="/relativite-restreinte-echelles-old" element={<RestrictedScaleRelativityPage />} />
         <Route path="/relativite-restreinte-echelles" element={<RestrictedScaleRelativityHubPage />} />
