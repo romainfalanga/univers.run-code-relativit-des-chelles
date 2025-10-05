@@ -20,7 +20,7 @@ import { RestrictedScaleRelativityHubPage, UniversalBudgetPage, ImmobileStatePag
 import { GeneralScaleRelativityHubPage, UniversalEscalatorPage, EnvironmentsPage, RadiationEffectPage, MultiplierCoefficientPage } from './pages/general';
 import { ThoughtExperimentsHubPage, DimensionsMuseumPage, UniversalTreadmillsPage } from './pages/experiments';
 import { ExpansionHubPage, IllusionExpansionPage, HubbleLawPage, CosmicRadiationPage, DarkEnergyPage } from './pages/expansion';
-import { SuperpositionTissusPage } from './pages/fabric';
+import { SuperpositionTissusPage, TapisRoulantFabricPage } from './pages/fabric';
 
 const AppContent: React.FC = () => {
 
@@ -41,6 +41,7 @@ const AppContent: React.FC = () => {
 
         <Route path="/tissu-espace-temps-echelle" element={<SpaceTimeScaleFabricPage />} />
         <Route path="/tissu-espace-temps-echelle/superposition" element={<SuperpositionTissusPage />} />
+        <Route path="/tissu-espace-temps-echelle/tapis-roulant" element={<TapisRoulantFabricPage />} />
 
         <Route path="/relativite-restreinte-echelles-old" element={<RestrictedScaleRelativityPage />} />
         <Route path="/relativite-restreinte-echelles" element={<RestrictedScaleRelativityHubPage />} />
