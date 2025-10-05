@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { markPageAsVisited } from '../../utils/pageVisits';
 
 export const DarkEnergyPage: React.FC = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
-    markPageAsVisited('/expansion-interne/energie-sombre');
   }, []);
 
   return (

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle2 } from 'lucide-react';
-import { isPageVisited } from '../utils/pageVisits';
+import { ArrowRight } from 'lucide-react';
 
 interface NavigationCard {
   title: string;
@@ -17,26 +16,9 @@ interface NavigationHubProps {
 }
 
 export const NavigationHub: React.FC<NavigationHubProps> = ({ cards }) => {
-  const [visitedPages, setVisitedPages] = React.useState<Set<string>>(new Set());
-
-  React.useEffect(() => {
-    const checkVisited = async () => {
-      const visited = new Set<string>();
-      for (const card of cards) {
-        const isVisited = await isPageVisited(card.path);
-        if (isVisited) {
-          visited.add(card.path);
-        }
-      }
-      setVisitedPages(visited);
-    };
-    checkVisited();
-  }, [cards]);
-
   return (
     <div className="flex flex-col gap-6 max-w-4xl mx-auto">
       {cards.map((card, index) => {
-        const isVisited = visitedPages.has(card.path);
         return (
           <Link
             key={index}
@@ -49,13 +31,10 @@ export const NavigationHub: React.FC<NavigationHubProps> = ({ cards }) => {
                   <h3 className="text-xl font-bold text-white mb-2">{card.title}</h3>
                   <p className="text-sm text-gray-200 leading-relaxed">{card.description}</p>
                 </div>
-                {isVisited && (
-                  <CheckCircle2 className="w-6 h-6 text-green-400 flex-shrink-0 ml-3" />
-                )}
               </div>
             </div>
             <div className="flex items-center justify-end text-white font-semibold">
-              <span className="mr-2">{isVisited ? 'Revoir' : 'Explorer'}</span>
+              <span className="mr-2">Explorer</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>

@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
-import { markPageAsVisited } from '../../utils/pageVisits';
 
 export const SpatialFreedomPage: React.FC = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
-    markPageAsVisited('/relativite-restreinte-echelles/liberte-spatiale');
   }, []);
 
   return (
