@@ -13,25 +13,33 @@ export const RestrictedScaleRelativityHubPage: React.FC = () => {
       title: "Le Budget Universel",
       description: "Explication des deux budgets ET et TE avec visualisations",
       path: "/relativite-restreinte-echelles/budget-universel",
-      gradient: "from-cyan-500 to-blue-500"
+      colorFrom: "from-cyan-900/40",
+      colorTo: "to-blue-900/30",
+      borderColor: "border-cyan-400"
     },
     {
       title: "Situation : Presque Immobile",
       description: "Budget temps maximum avec graphiques et barres de progression",
       path: "/relativite-restreinte-echelles/immobile",
-      gradient: "from-green-500 to-emerald-500"
+      colorFrom: "from-green-900/40",
+      colorTo: "to-emerald-900/30",
+      borderColor: "border-green-400"
     },
     {
       title: "Situation : Vitesse Extrêmement Rapide",
       description: "Budget espace/échelle maximum avec visualisations",
       path: "/relativite-restreinte-echelles/vitesse-extreme",
-      gradient: "from-red-500 to-orange-500"
+      colorFrom: "from-red-900/40",
+      colorTo: "to-orange-900/30",
+      borderColor: "border-red-400"
     },
     {
       title: "La Liberté Spatiale",
       description: "Les contraintes du modèle et le moteur immuable",
       path: "/relativite-restreinte-echelles/liberte-spatiale",
-      gradient: "from-purple-500 to-indigo-500"
+      colorFrom: "from-purple-900/40",
+      colorTo: "to-indigo-900/30",
+      borderColor: "border-purple-400"
     }
   ];
 
@@ -60,24 +68,14 @@ export const RestrictedScaleRelativityHubPage: React.FC = () => {
           </p>
         </header>
 
-        <NavigationHub
-          sections={navigationCards}
-          backPath="/relativite-echelles"
-          backLabel="Retour à la Relativité des Échelles"
-        />
-
-        <div className="max-w-4xl mx-auto mt-12 sm:mt-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-6 sm:p-8 border border-white/20 shadow-2xl">
-            <h2 className="text-2xl sm:text-3xl font-bold text-cyan-300 mb-4 sm:mb-6">Introduction</h2>
-            <div className="space-y-4 text-base sm:text-lg text-gray-200 leading-relaxed">
-              <p>
-                Einstein avait montré que notre mouvement se partage entre l'espace et le temps : <strong className="text-white">plus tu avances vite dans l'espace, moins tu avances vite dans le temps</strong>.
-              </p>
-              <p>
-                Dans ce modèle, ce partage s'étend. Il existe un <strong className="text-cyan-300">budget universel</strong>, découpé en deux comptes reliés par un même pivot : le curseur temps.
-              </p>
-            </div>
+        <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-6 sm:p-8 border border-white/20 shadow-2xl mb-8">
+            <p className="text-base sm:text-lg text-gray-200 leading-relaxed text-center">
+              Einstein avait montré que notre mouvement se partage entre l'espace et le temps. Dans ce modèle, ce partage s'étend : il existe un <strong className="text-white">budget universel</strong>, découpé en deux comptes reliés par un même pivot : le curseur temps.
+            </p>
           </div>
+
+          <NavigationHub cards={navigationCards} />
         </div>
       </div>
     </div>

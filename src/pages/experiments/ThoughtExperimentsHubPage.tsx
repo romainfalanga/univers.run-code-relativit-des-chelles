@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 import { NavigationHub } from '../../components/NavigationHub';
 
 export const ThoughtExperimentsHubPage: React.FC = () => {
@@ -6,24 +8,30 @@ export const ThoughtExperimentsHubPage: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const sections = [
+  const navigationCards = [
     {
       title: "Le Musée des Dimensions",
       description: "Visualiser la cinquième dimension à travers une expérience de pensée révélatrice",
       path: "/experiences-pensee-echelles/musee-dimensions",
-      gradient: "from-orange-500 to-yellow-500"
+      colorFrom: "from-yellow-900/40",
+      colorTo: "to-orange-900/30",
+      borderColor: "border-yellow-400"
     },
     {
       title: "Les Tapis Roulants Universels",
       description: "Comment chaque objet voyage sur son propre escalator cosmique",
       path: "/experiences-pensee-echelles/tapis-roulants",
-      gradient: "from-red-500 to-pink-500"
+      colorFrom: "from-red-900/40",
+      colorTo: "to-pink-900/30",
+      borderColor: "border-red-400"
     },
     {
       title: "L'Illusion de l'Expansion",
       description: "Pourquoi l'univers semble s'étendre alors qu'il se contracte",
       path: "/experiences-pensee-echelles/illusion-expansion",
-      gradient: "from-indigo-500 to-purple-500"
+      colorFrom: "from-indigo-900/40",
+      colorTo: "to-purple-900/30",
+      borderColor: "border-indigo-400"
     }
   ];
 
@@ -33,36 +41,33 @@ export const ThoughtExperimentsHubPage: React.FC = () => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-900/20 via-transparent to-red-900/20"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 relative z-10">
-        <header className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-orange-300 via-red-300 to-pink-300 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_30px_rgba(251,146,60,0.8)] mb-4 sm:mb-6 px-2">
+        <div className="flex justify-center mb-4 sm:mb-6">
+          <Link
+            to="/relativite-echelles"
+            className="group flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-500 hover:to-gray-600 text-white rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-gray-500/25"
+          >
+            <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
+            Retour
+          </Link>
+        </div>
+
+        <header className="text-center mb-6 sm:mb-8 lg:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-orange-300 via-red-300 to-pink-300 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_30px_rgba(251,146,60,0.8)] mb-3 sm:mb-4 px-2">
             Les Expériences de Pensée
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-orange-200/90 max-w-4xl mx-auto px-4 leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-orange-200/90 max-w-4xl mx-auto px-4 leading-relaxed">
             Visualiser la cinquième dimension à travers des expériences mentales
           </p>
         </header>
 
-        <NavigationHub
-          sections={sections}
-          backPath="/relativite-echelles"
-          backLabel="Retour à la Relativité des Échelles"
-        />
-
-        <div className="max-w-4xl mx-auto mt-12 sm:mt-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-6 sm:p-8 border border-white/20 shadow-2xl">
-            <h2 className="text-2xl sm:text-3xl font-bold text-orange-300 mb-4 sm:mb-6">Introduction</h2>
-            <div className="space-y-4 text-base sm:text-lg text-gray-200 leading-relaxed">
-              <p>
-                La cinquième dimension est difficile à visualiser. Comment imaginer une dimension au-delà de l'espace et du temps que nous connaissons ? <strong className="text-white">Les expériences de pensée sont des outils puissants pour rendre l'abstrait concret</strong>.
-              </p>
-              <p>
-                À travers ces expériences mentales, nous allons explorer comment la dimension d'échelle se manifeste, comment elle interagit avec le temps et l'espace, et pourquoi elle change notre compréhension fondamentale de l'univers.
-              </p>
-              <p className="text-orange-100 font-semibold">
-                Préparez-vous à un voyage conceptuel qui révélera la nature cachée de la réalité.
-              </p>
-            </div>
+        <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-6 sm:p-8 border border-white/20 shadow-2xl mb-8">
+            <p className="text-base sm:text-lg text-gray-200 leading-relaxed text-center">
+              La cinquième dimension est difficile à visualiser. <strong className="text-white">Les expériences de pensée sont des outils puissants pour rendre l'abstrait concret</strong>. Préparez-vous à un voyage conceptuel qui révélera la nature cachée de la réalité.
+            </p>
           </div>
+
+          <NavigationHub cards={navigationCards} />
         </div>
       </div>
     </div>

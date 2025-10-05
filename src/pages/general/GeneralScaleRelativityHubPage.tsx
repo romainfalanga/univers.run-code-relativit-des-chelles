@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
 import { NavigationHub } from '../../components/NavigationHub';
 
 export const GeneralScaleRelativityHubPage: React.FC = () => {
@@ -6,30 +8,38 @@ export const GeneralScaleRelativityHubPage: React.FC = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  const sections = [
+  const navigationCards = [
     {
       title: "L'Escalator Universel",
       description: "Comment la masse et l'énergie inclinent le tapis roulant cosmique",
       path: "/relativite-generale-echelles/escalator-universel",
-      gradient: "from-purple-500 to-indigo-500"
+      colorFrom: "from-purple-900/40",
+      colorTo: "to-indigo-900/30",
+      borderColor: "border-purple-400"
     },
     {
       title: "Les Différents Environnements",
       description: "Du vide spatial aux trous noirs : comment la gravité modifie l'inclinaison",
       path: "/relativite-generale-echelles/environnements",
-      gradient: "from-blue-500 to-cyan-500"
+      colorFrom: "from-blue-900/40",
+      colorTo: "to-cyan-900/30",
+      borderColor: "border-blue-400"
     },
     {
       title: "L'Effet du Rayonnement",
       description: "Comment la lumière de l'univers agit comme une pression constante",
       path: "/relativite-generale-echelles/effet-rayonnement",
-      gradient: "from-orange-500 to-red-500"
+      colorFrom: "from-orange-900/40",
+      colorTo: "to-red-900/30",
+      borderColor: "border-orange-400"
     },
     {
       title: "Le Coefficient Multiplicateur",
       description: "La formule unifiée reliant vitesse et courbure gravitationnelle",
       path: "/relativite-generale-echelles/coefficient-multiplicateur",
-      gradient: "from-indigo-500 to-purple-500"
+      colorFrom: "from-indigo-900/40",
+      colorTo: "to-purple-900/30",
+      borderColor: "border-indigo-400"
     }
   ];
 
@@ -39,36 +49,33 @@ export const GeneralScaleRelativityHubPage: React.FC = () => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-900/20 via-transparent to-indigo-900/20"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 lg:py-8 relative z-10">
-        <header className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-purple-300 via-indigo-300 to-blue-300 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_30px_rgba(147,51,234,0.8)] mb-4 sm:mb-6 px-2">
+        <div className="flex justify-center mb-4 sm:mb-6">
+          <Link
+            to="/relativite-echelles"
+            className="group flex items-center px-4 sm:px-6 py-2 sm:py-3 bg-gradient-to-r from-gray-600 to-gray-700 hover:from-gray-500 hover:to-gray-600 text-white rounded-lg font-semibold text-sm sm:text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-gray-500/25"
+          >
+            <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5 mr-2 group-hover:-translate-x-1 transition-transform" />
+            Retour
+          </Link>
+        </div>
+
+        <header className="text-center mb-6 sm:mb-8 lg:mb-12">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-300 via-indigo-300 to-blue-300 bg-clip-text text-transparent bg-[length:400%_400%] animate-gradient-x drop-shadow-[0_0_30px_rgba(147,51,234,0.8)] mb-3 sm:mb-4 px-2">
             Relativité Générale des Échelles
           </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-purple-200/90 max-w-4xl mx-auto px-4 leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-purple-200/90 max-w-4xl mx-auto px-4 leading-relaxed">
             Comment la masse et l'énergie inclinent l'escalator universel
           </p>
         </header>
 
-        <NavigationHub
-          sections={sections}
-          backPath="/relativite-echelles"
-          backLabel="Retour à la Relativité des Échelles"
-        />
-
-        <div className="max-w-4xl mx-auto mt-12 sm:mt-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-6 sm:p-8 border border-white/20 shadow-2xl">
-            <h2 className="text-2xl sm:text-3xl font-bold text-purple-300 mb-4 sm:mb-6">Introduction</h2>
-            <div className="space-y-4 text-base sm:text-lg text-gray-200 leading-relaxed">
-              <p>
-                Dans la relativité restreinte des échelles, nous avons vu comment la vitesse affecte notre descente sur le tapis roulant universel. Mais il manquait un élément crucial : <strong className="text-white">l'effet de la masse et de l'énergie environnantes</strong>.
-              </p>
-              <p>
-                La relativité générale d'Einstein nous a révélé que la masse courbe l'espace-temps. Dans ce modèle étendu, <strong className="text-purple-300">cette courbure agit comme une main qui appuie sur le tapis roulant, modifiant son inclinaison</strong>.
-              </p>
-              <p className="text-purple-100 font-semibold">
-                La masse et l'énergie n'inventent pas un nouveau moteur, elles ajoutent seulement un coefficient multiplicateur à l'inclinaison du tapis roulant.
-              </p>
-            </div>
+        <div className="max-w-6xl mx-auto space-y-6 sm:space-y-8">
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl lg:rounded-2xl p-6 sm:p-8 border border-white/20 shadow-2xl mb-8">
+            <p className="text-base sm:text-lg text-gray-200 leading-relaxed text-center">
+              La masse et l'énergie environnantes viennent courber l'espace-temps. Dans ce modèle étendu, <strong className="text-white">cette courbure agit comme une main qui appuie sur le tapis roulant, modifiant son inclinaison</strong>. La masse et l'énergie n'inventent pas un nouveau moteur, elles ajoutent seulement un coefficient multiplicateur.
+            </p>
           </div>
+
+          <NavigationHub cards={navigationCards} />
         </div>
       </div>
     </div>
